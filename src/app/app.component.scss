@@ -1,0 +1,61 @@
+::ng-deep :root {
+   --color-primary: #34495e;
+   --color-primary-dark: #012959;
+   --color-primary-dark-rgb: 1, 41, 89;
+   --color-primary-light: #B3C7DF;
+   --color-primary-light-rgb: 179, 199, 223;
+}
+
+.main-container {
+    background-image: linear-gradient(to right bottom, 
+                                        rgba(var(--color-primary-dark-rgb), 0.5),
+                                        rgba(var(--color-primary-dark-rgb), 0.8),  
+                                        rgba(var(--color-primary-dark-rgb), 0.5) ) 
+                    , url('../assets/img/bg.jpg');
+
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-container {
+    padding: 3rem;
+    margin: 0 15rem 5rem 15rem;
+}
+
+.quote-text {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.random-quote {
+    font-size: 3.5rem;
+    font-family: inherit;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    outline-style: none;
+    background-color: var(--color-primary);
+    color: var(--color-primary-light);
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black;
+    transition: all .4s;
+
+    &:hover {
+        background-color: var(--color-primary-light);
+        color: var(--color-primary);
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(1.1) translateY(1rem);
+    }
+}
+
